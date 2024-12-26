@@ -61,14 +61,12 @@ const HeroSection = ({
   }, [isAnimating, codeExample]);
 
   return (
-    <section className="min-h-[800px] w-full bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="landing-title text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-            {title}
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-8">{subtitle}</p>
-          <div className="flex justify-center gap-4">
+    <section className="min-h-[800px] w-full bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-4 md:px-8 lg:px-16 landing-section">
+      <div className="banner-container">
+        <div className="banner-top">
+          <h1 className="landing-title">{title}</h1>
+          <p className="landing-subtitle">{subtitle}</p>
+          <div className="hero-btn-container">
             <Button size="lg" className="get-started-btn">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -101,11 +99,15 @@ const HeroSection = ({
                 )}
               </Button>
             </div>
-            <pre className="font-mono text-sm bg-slate-900/50 p-4 rounded-lg overflow-x-auto">
+            <pre className="font-mono text-sm bg-slate-900/50 p-4 rounded-lg overflow-x-auto spark-test">
               {codeExample.split("\n").map((line, index) => (
                 <div
                   key={index}
-                  className={`${currentLine === index && isAnimating ? "bg-indigo-500/20" : ""} px-2 -mx-2`}
+                  className={`${
+                    currentLine === index && isAnimating
+                      ? "bg-indigo-500/20"
+                      : ""
+                  } px-2 -mx-2`}
                 >
                   {line}
                 </div>

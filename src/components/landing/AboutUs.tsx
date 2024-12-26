@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -64,10 +63,21 @@ const AboutUs = () => {
             The Modern CSS Preprocessor
           </h2>
           <p className="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
-            SparkCSS is a revolutionary CSS preprocessor that combines SCSS-like
-            features with utility classes similar to Tailwind. Our mission is to
-            provide developers with the perfect balance of utility-first CSS and
-            advanced preprocessor capabilities.
+            SparkCSS is a revolutionary CSS preprocessor that brings together
+            the best of both worlds: the power of SCSS-like features and the
+            speed of utility-first CSS frameworks like Tailwind. Designed with
+            modern developers in mind, SparkCSS reimagines the way we write and
+            manage stylesheets by combining custom syntax capabilities with a
+            rich library of utility classes, making it easier to build
+            responsive, scalable, and maintainable websites.
+            <br />
+            <br />
+            Our mission is simple: to empower developers by providing a seamless
+            development experience that balances the flexibility and power of
+            advanced preprocessor features with the speed and efficiency of
+            utility-first CSS. Whether you're working on a small project or a
+            large-scale application, SparkCSS offers the tools you need to
+            create beautiful, responsive designs quickly and effortlessly.
           </p>
         </div>
 
