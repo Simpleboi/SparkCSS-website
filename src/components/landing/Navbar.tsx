@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Github, Menu } from "lucide-react";
+import "../../styles/LandingStyles/nav.scss";
 
 interface NavbarProps {
   links?: Array<{ title: string; href: string }>;
@@ -18,7 +18,7 @@ const Navbar = ({
   ],
 }: NavbarProps) => {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+    <nav className="z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800 nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -35,7 +35,7 @@ const Navbar = ({
                     <Link
                       key={link.title}
                       to={link.href}
-                      className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                      className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors nav-links"
                     >
                       {link.title}
                     </Link>
@@ -58,7 +58,7 @@ const Navbar = ({
                 variant="ghost"
                 size="sm"
                 className="text-slate-300 hover:text-white"
-                onClick={() => window.open("https://github.com", "_blank")}
+                onClick={() => window.open("https://github.com/Simpleboi/sparkcss", "_blank")}
               >
                 <Github className="w-5 h-5" />
               </Button>

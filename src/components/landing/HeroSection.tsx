@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Pause } from "lucide-react";
+import "../../styles/LandingStyles/hero.scss";
 
 interface HeroSectionProps {
   title?: string;
@@ -42,7 +43,7 @@ const defaultCompiledOutput = `.button {
 
 const HeroSection = ({
   title = "Write Better CSS with SparkCSS",
-  subtitle = "The modern preprocessor that makes CSS development a breeze",
+  subtitle = "A Simple Yet Powerful Preprocessor and Responsive Toolkit for Developers Who Demand Precision and Speed",
   codeExample = defaultCodeExample,
   compiledOutput = defaultCompiledOutput,
 }: HeroSectionProps) => {
@@ -63,12 +64,12 @@ const HeroSection = ({
     <section className="min-h-[800px] w-full bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+          <h1 className="landing-title text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
             {title}
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8">{subtitle}</p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
+            <Button size="lg" className="get-started-btn">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
