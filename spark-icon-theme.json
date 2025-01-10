@@ -1,0 +1,12 @@
+{
+    "iconDefinitions": {
+      "spark-icon": {
+        "iconPath": "C:/web_development/projects/SparkCSS-website/public/assets/images/logo-two.png"
+      }
+    },
+    "fileExtensions": {
+      "spark": "spark-icon"
+    },
+    "languageIds": {}
+  }
+  
