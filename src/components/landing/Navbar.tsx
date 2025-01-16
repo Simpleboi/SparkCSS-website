@@ -3,10 +3,30 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Github, Menu } from "lucide-react";
 import "../../styles/LandingStyles/nav.scss";
+import test from "node:test";
+import { CSSProperties } from "react";
 
 interface NavbarProps {
   links?: Array<{ title: string; href: string }>;
 }
+
+const testingStlyes: CSSProperties = {
+  height: "100vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
+  fontSize: "2rem"
+};
+
+export const NavBarTesting = () => {
+  return (
+    <div style={testingStlyes}>
+      <h1>This Section is currently under construction. Check back in soon!</h1>
+      <h3>-Nate</h3>
+    </div>
+  );
+};
 
 const Navbar = ({
   links = [
@@ -47,7 +67,7 @@ const Navbar = ({
                     >
                       {link.title}
                     </a>
-                  ),
+                  )
                 )}
               </div>
             </div>
@@ -58,7 +78,9 @@ const Navbar = ({
                 variant="ghost"
                 size="sm"
                 className="text-slate-300 hover:text-white"
-                onClick={() => window.open("https://github.com/Simpleboi/sparkcss", "_blank")}
+                onClick={() =>
+                  window.open("https://github.com/Simpleboi/sparkcss", "_blank")
+                }
               >
                 <Github className="w-5 h-5" />
               </Button>
@@ -101,7 +123,7 @@ const Navbar = ({
                         >
                           {link.title}
                         </a>
-                      ),
+                      )
                     )}
                     <div className="pt-4 border-t border-slate-800">
                       <Button

@@ -3,10 +3,11 @@ import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import Documentation from "./pages/documentation";
 import TeamPage from "./pages/team";
-import TestimonialsPage from "./pages/testimonials";
+// import TestimonialsPage from "./pages/testimonials";
 import AboutPage from "./pages/about";
 import FeaturesPage from "./pages/features";
 import routes from "tempo-routes";
+import { NavBarTesting } from "./components/landing/Navbar";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/documentation" element={<Documentation />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/testimonials" element={<NavBarTesting />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>
