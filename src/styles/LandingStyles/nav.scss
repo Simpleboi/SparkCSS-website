@@ -1,12 +1,10 @@
 @use "../plug" as p;
 
 .nav {
-    // border: 1px solid red;
     position: fixed;
     width: 100%;
 
     .nav-links {
-        // border: 1px solid red;
         color: p.$accent-third;
     }
     .nav-links:hover {

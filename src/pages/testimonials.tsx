@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
     companyLogo: "https://api.dicebear.com/7.x/initials/svg?seed=DH",
     content:
       "As a designer who codes, SparkCSS gives me the flexibility I need to implement designs exactly as envisioned. The utility classes make quick adjustments a breeze, while the SCSS features allow for complex design systems.",
-    rating: 5,
+    rating: 4,
   },
   {
     author: "James Wilson",

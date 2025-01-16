@@ -3,8 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import "../styles/TeamStyles/team.scss";
 
 interface TeamMember {
   name: string;
@@ -15,48 +14,16 @@ interface TeamMember {
     github?: string;
     twitter?: string;
     linkedin?: string;
+    instagram?: string;
   };
 }
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Sarah Johnson",
-    role: "Lead Developer",
+    name: "Nathaniel Paz",
+    role: "Creator / Lead Developer",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
-    bio: "Full-stack developer with 8+ years of experience in building scalable web applications. Lead developer of SparkCSS core features.",
-    social: {
-      github: "https://github.com",
-      twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    name: "Michael Chen",
-    role: "Core Contributor",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael",
-    bio: "Frontend specialist focused on developer experience and performance optimization. Creator of SparkCSS's utility system.",
-    social: {
-      github: "https://github.com",
-      twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    name: "Emma Wilson",
-    role: "Documentation Lead",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=emma",
-    bio: "Technical writer and developer advocate. Passionate about making complex features accessible through clear documentation.",
-    social: {
-      github: "https://github.com",
-      twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    name: "Alex Rodriguez",
-    role: "UI/UX Designer",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=alex",
-    bio: "Design systems expert with a focus on creating intuitive developer tools and beautiful user interfaces.",
+    bio: "Founder of SparkCSS. A passionate full-stack web developer with expertise in creating intuitive user interfaces and scalable backend solutions. Dedicated to innovation and empowering developers with tools that enhance productivity and creativity",
     social: {
       github: "https://github.com",
       twitter: "https://twitter.com",
@@ -64,6 +31,12 @@ const teamMembers: TeamMember[] = [
     },
   },
 ];
+
+
+export const TeamHeader = () => {
+  return(<div></div>)
+}
+
 
 const TeamPage = () => {
   return (
@@ -88,61 +61,49 @@ const TeamPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="team-container">
               {teamMembers.map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 p-6"
+                  className="bg-slate-800/50 border-slate-700 p-6 team-card"
                 >
-                  <div className="flex items-start space-x-6">
+                  <div className="team-inner-container">
                     <img
                       src={member.avatar}
                       alt={member.name}
                       className="w-24 h-24 rounded-full"
                     />
-                    <div className="flex-1">
+                    <div className="name-container">
                       <h2 className="text-xl font-semibold text-white mb-1">
                         {member.name}
                       </h2>
                       <p className="text-indigo-400 mb-3">{member.role}</p>
                       <p className="text-slate-300 mb-4">{member.bio}</p>
-                      <div className="flex space-x-2">
-                        {member.social.github && (
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-slate-300 hover:text-white"
-                            onClick={() =>
-                              window.open(member.social.github, "_blank")
-                            }
-                          >
-                            <Github className="h-4 w-4" />
-                          </Button>
-                        )}
-                        {member.social.twitter && (
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-slate-300 hover:text-white"
-                            onClick={() =>
-                              window.open(member.social.twitter, "_blank")
-                            }
-                          >
-                            <Twitter className="h-4 w-4" />
-                          </Button>
-                        )}
-                        {member.social.linkedin && (
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-slate-300 hover:text-white"
-                            onClick={() =>
-                              window.open(member.social.linkedin, "_blank")
-                            }
-                          >
-                            <Linkedin className="h-4 w-4" />
-                          </Button>
-                        )}
+                      <div className="icon-container">
+                        <a href="https://github.com/Simpleboi" target="_blank">
+                          <i className="bx bxl-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/n8.jsx/" target="_blank">
+                          <i className="bx bxl-instagram"></i>
+                        </a>
+                        <a
+                          href="https://www.youtube.com/@N8DotJsx/videos"
+                          target="_blank"
+                        >
+                          <i className="bx bxl-youtube"></i>
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/nathaniel-eureste-12641220a/"
+                          target="_blank"
+                        >
+                          <i className="bx bxl-linkedin-square"></i>
+                        </a>
+                        <a href="https://discord.gg/DCszF2VrSm" target="_blank">
+                          <i className="bx bxl-discord-alt"></i>
+                        </a>
+                        <a href="https://n8jsx.com/" target="_blank">
+                          <i className="bx bx-code-alt"></i>
+                        </a>
                       </div>
                     </div>
                   </div>

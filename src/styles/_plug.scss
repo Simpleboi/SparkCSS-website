@@ -29,3 +29,8 @@ $text-highlight: #c084fc;
 $borderColor: rgba(193, 132, 252, 0.4);
 $glow: 0 4px 6px rgba(129, 140, 248, 0.5);
 $linearGrad: linear-gradient(90deg, #818cf8, #c084fc);
+
+// function to convert px units to rem units
+@function rem($px, $base-font-size: 16px) {
+    @return calc($px / $base-font-size) * 1rem;
+}

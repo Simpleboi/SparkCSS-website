@@ -1,0 +1,42 @@
+@use "../plug" as p;
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .team-card {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .team-inner-container {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        a {
+            font-size: 1.75rem;
+            color: p.$gradient-start;
+        }
+        a:hover {
+            color: p.$accent-primary;
+            transition: all 0.25s ease;
+        }
+    };
+}
+
+@media screen and (max-width: p.rem(570px)) {
+    .team-container {
+        .team-card {
+            width: 100%;
+        }
+    }
+}
