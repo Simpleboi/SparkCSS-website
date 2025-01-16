@@ -23,7 +23,7 @@ const Footer = ({
       items: [
         { label: "Features", href: "#features" },
         { label: "Documentation", href: "#documentation" },
-        { label: "Pricing", href: "#pricing" },
+        
       ],
     },
     {

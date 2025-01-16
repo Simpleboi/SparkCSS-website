@@ -20,10 +20,25 @@ const Documentation = ({
 yarn add sparkcss
 pnpm add sparkcss`,
     apiReference: `## API Reference
-- Variables
-- Mixins
-- Functions
-- Directives`,
+
+### Variables
+$variable-name: value;
+
+### Mixins
+@mixin name($param) {
+  // mixin content
+}
+
+### Functions
+@function name($param) {
+  @return $result;
+}
+
+### Directives
+@include name(param);
+@extend .class;
+`
+,
   },
 }: DocumentationProps) => {
   return (
