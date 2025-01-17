@@ -2,11 +2,9 @@ import React from "react";
 import Navbar from "./landing/Navbar";
 import HeroSection from "./landing/HeroSection";
 import AboutUs from "./landing/AboutUs";
-import FeatureGrid from "./landing/FeatureGrid";
-import Documentation from "./landing/Documentation";
-import TeamSection from "./landing/TeamSection";
 import TestimonialCarousel from "./landing/TestimonialCarousel";
 import Footer from "./landing/Footer";
+import { NewFeatures } from "./landing/NewFeatures";
 
 const Home = () => {
   return (
@@ -14,10 +12,8 @@ const Home = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <NewFeatures />
         <AboutUs />
-        {/* <FeatureGrid /> */}
-        {/* <Documentation /> */}
-        {/* <TeamSection /> */}
         <TestimonialCarousel />
       </main>
       <Footer />

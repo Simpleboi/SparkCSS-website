@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Variable, Code2, Layout, Box } from "lucide-react";
 import "../styles/FeatureStyles/feature.scss";

@@ -1,0 +1,42 @@
+@use "../plug" as p;
+
+.newFeat-container {
+  // border: 1px solid red;
+
+  h1 {
+    margin: 0 auto;
+    border: 1px solid red;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding: 2rem 1.5rem;
+    background-clip: text;
+    color: transparent;
+    background-image: p.$linearGrad;
+  }
+
+  .utils-container {
+    border: 1px solid red;
+    padding: 0 1rem;
+
+    .feat-container {
+      // border: 2px solid blue;
+
+      h3 {
+        // border: 1px solid red;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    pre {
+      margin-top: 0.25rem;
+      border-radius: 0.25rem;
+      background: p.$linearGrad;
+      padding: 1rem;
+    }
+  }
+}
