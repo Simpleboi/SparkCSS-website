@@ -49,7 +49,7 @@ $variable-name: value;
   // mixin content
 }
 
-## Functions
+## Functions something
 @function name($param) {
   @return $result;
 }

@@ -4,6 +4,7 @@ import Footer from "@/components/landing/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import "../styles/TeamStyles/team.scss";
+import logo from "/assets/images/logo.jpg"
 
 interface TeamMember {
   name: string;
@@ -22,7 +23,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Nathaniel Paz",
     role: "Creator / Lead Developer",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
+    avatar: logo,
     bio: "Founder of SparkCSS. A passionate full-stack web developer with expertise in creating intuitive user interfaces and scalable backend solutions. Dedicated to innovation and empowering developers with tools that enhance productivity and creativity",
     social: {
       github: "https://github.com",
@@ -60,9 +61,9 @@ export const TeamStaff = () => {
         >
           <div className="team-inner-container">
             <img
-              src={member.avatar}
+              src={logo}
               alt={member.name}
-              className="w-24 h-24 rounded-full"
+              className="w-24 h-24 rounded-full team-img"
             />
             <div className="name-container">
               <h2 className="text-xl font-semibold text-white mb-1">

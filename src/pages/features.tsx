@@ -4,6 +4,8 @@ import Footer from "@/components/landing/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Variable, Code2, Layout, Box } from "lucide-react";
+import "../styles/FeatureStyles/feature.scss";
+import { FeaturesHeader } from "@/components/featuresHeader";
 
 interface CodeExample {
   title: string;
@@ -66,26 +68,12 @@ const codeExamples: CodeExample[] = [
 
 const FeaturesPage = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-900 feat-container">
       <Navbar />
       <main className="pt-16">
         <div className="w-full py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <Badge
-                variant="secondary"
-                className="mb-4 bg-slate-800 text-indigo-400 hover:bg-slate-700"
-              >
-                Core Features
-              </Badge>
-              <h1 className="text-4xl font-bold mb-6">
-                Powerful Features for Modern CSS
-              </h1>
-              <p className="text-slate-300 text-lg max-w-3xl mx-auto">
-                Explore the core features that make SparkCSS a powerful tool for
-                modern web development.
-              </p>
-            </div>
+          <div className="max-w-7xl mx-auto px-4 feat-header">
+            <FeaturesHeader/>
 
             <div className="grid grid-cols-1 gap-8">
               {codeExamples.map((example, index) => (

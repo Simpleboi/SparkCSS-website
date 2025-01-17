@@ -9,9 +9,9 @@
     line-height: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    padding: 0.5rem;
     background-clip: text;
     color: transparent;
-    padding: 0.5rem;
     background-image: p.$linearGrad;
   }
 }
@@ -29,6 +29,10 @@
     .team-inner-container {
       display: flex;
       align-items: flex-start;
+
+      .name-container {
+        margin-left: 0.5rem;
+      }
     }
   }
 
@@ -37,6 +41,7 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
+    // border: 1px solid red;
 
     a {
       font-size: 1.75rem;
@@ -53,6 +58,17 @@
   .team-container {
     .team-card {
       width: 100%;
+
+      .team-inner-container {
+        flex-direction: column;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .icon-container {
+      justify-content: space-evenly;
     }
   }
 }
