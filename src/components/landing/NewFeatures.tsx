@@ -14,7 +14,58 @@ const ArrayFeatures = `@array: paddingValues ['10px', '2rem', '4em'];
 .my-class {
     padding: paddingValues[2] // '4em'
 };
+
+@snippet: example() {
+    padding: paddingValues[0]; // 10px
+}
 `;
+
+const JavaScriptIntegration = `// Example: Dynamically update a CSS variable
+SparkCSS.update('@variable primary-color', '#ff5733');
+
+// Example: Apply a new theme
+SparkCSS.applyTheme({
+  'primary-color': '#3498db',
+  'secondary-color': '#2ecc71',
+});
+`;
+
+const PalletteTheme = `// Define a palette
+@palette: theme {
+  primary: #3498db;
+  secondary: #2ecc71;
+  accent: #e74c3c;
+  background: #f5f5f5;
+};
+`;
+
+const Snippet = `// Define a snippet with stronger validation
+@snippet: button($color, $padding) {
+  background-color: $color; 
+  padding: $padding;        
+  border: none;             
+  transition: all 0.3s;     
+};
+`;
+
+const Min = `
+.button{background-color:#3498db;
+padding:10px 20px;border:none;border-radius:5px;
+transition:all .3s ease}.card
+{background-color:#f5f5f5;
+padding:20px;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+
+`;
+
+const Scope = `// Define a scoped style block
+@scope: button {
+  .primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }`;
 
 const features = [
   {
@@ -26,33 +77,38 @@ const features = [
   },
   {
     icon: <Workflow className="w-6 h-6 text-indigo-400" />,
-    title: "Advanced Directives",
+    title: "JavaScript Integration",
     description:
-      "Create complex styles using custom directives and powerful preprocessor features.",
+      "The JavaScript integration allows developers to interact with SparkCSS styles dynamically. You can update variables, switch themes, or even inject new snippets programmatically, enabling real-time styling changes.",
+    code: JavaScriptIntegration,
   },
   {
     icon: <Puzzle className="w-6 h-6 text-indigo-400" />,
-    title: "Reusable Components",
+    title: "New @palette directive",
     description:
-      "Build and maintain a library of reusable CSS components and patterns.",
+      "The @palette directive in SparkCSS v1.5 simplifies the process of creating and managing color themes. By defining a palette, you can generate consistent and reusable color schemes across your project, ensuring design uniformity and making theme switching effortless",
+    code: PalletteTheme,
   },
   {
     icon: <Lightbulb className="w-6 h-6 text-indigo-400" />,
-    title: "Smart Optimization",
+    title: "Stronger Validation",
     description:
-      "Automatic CSS optimization and minification for production-ready code.",
+      "v1.5 introduces enhanced validation for properties inside @snippet, ensuring that only valid CSS properties and values are used. This feature helps catch errors early, maintain consistency, and enforce best practices in your custom snippets.",
+    code: Snippet,
   },
   {
     icon: <Wand2 className="w-6 h-6 text-indigo-400" />,
-    title: "Custom Functions",
+    title: "Optimization",
     description:
-      "Create your own CSS functions for complex calculations and transformations.",
+      "SparkCSS v1.5 includes built-in support for minifying and optimizing your CSS during compilation, eliminating the need for external tools. This feature ensures your stylesheets are lightweight, efficient, and ready for production with minimal effort.",
+    code: Min,
   },
   {
     icon: <Settings2 className="w-6 h-6 text-indigo-400" />,
-    title: "Developer Tools",
+    title: "New @scope directive",
     description:
-      "Built-in debugging tools and source maps for easier development.",
+      "The @scope directive in v1.5 helps avoid class name conflicts by scoping styles to a specific component or module. It automatically prefixes your styles with a unique namespace, ensuring modularity and better maintainability in large projects.",
+    code: Scope,
   },
 ];
 
@@ -81,6 +137,18 @@ export const NewFeatures = () => {
           </Card>
         ))}
       </div>
+      <p className="text-slate-300 text-lg mx-auto leading-relaxed update-para">
+        The upcoming SparkCSS v1.5 is packed with exciting features to enhance
+        your workflow! This version will introduce support for arrays, stronger
+        validation for properties inside @snippet, and syntax highlighting
+        through a custom VSCode extension. You'll also be able to generate color
+        themes effortlessly using @palette and enjoy built-in support for
+        minifying and optimizing your CSS, reducing file size without external
+        tools. Additionally, v1.5 will bring JavaScript integration, allowing
+        you to dynamically modify styles using SparkCSS syntax. While version
+        1.4 remains the current stable release, these powerful updates are just
+        around the corner, stay tuned!
+      </p>
     </section>
   );
 };

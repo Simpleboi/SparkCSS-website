@@ -1,11 +1,8 @@
 @use "../plug" as p;
 
 .newFeat-container {
-  // border: 1px solid red;
-
   h1 {
     margin: 0 auto;
-    border: 1px solid red;
     text-align: center;
     font-size: 3rem;
     line-height: 2.5rem;
@@ -18,14 +15,10 @@
   }
 
   .utils-container {
-    border: 1px solid red;
     padding: 0 1rem;
 
     .feat-container {
-      // border: 2px solid blue;
-
       h3 {
-        // border: 1px solid red;
         font-size: 1.5rem;
         line-height: 1.75rem;
         margin-bottom: 0.5rem;
@@ -37,6 +30,12 @@
       border-radius: 0.25rem;
       background: p.$linearGrad;
       padding: 1rem;
+      flex-grow: 1;
     }
+  }
+  .update-para {
+    margin-bottom: 2rem;
+    max-width: 50rem;
+    text-align: center;
   }
 }
