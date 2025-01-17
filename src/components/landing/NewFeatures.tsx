@@ -123,9 +123,6 @@ export const NewFeatures = () => {
             className="p-6 bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors"
           >
             <div className="flex items-start space-x-4 feat-container">
-              <div className="p-2 bg-slate-700/50 rounded-lg">
-                {feature.icon}
-              </div>
               <div>
                 <h3 className="text-xl font-semibold text-white">
                   {feature.title}

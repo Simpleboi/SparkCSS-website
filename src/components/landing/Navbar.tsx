@@ -16,14 +16,16 @@ const testingStlyes: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  fontSize: "2rem"
+  fontSize: "2rem",
+  padding: "2rem"
 };
 
 export const NavBarTesting = () => {
   return (
     <div style={testingStlyes}>
       <h1>This Section is currently under construction. Check back in soon!</h1>
-      <h3>-Nate</h3>
+      <h3>Follow me on IG: @n8.jsx</h3>
+      <h4>-Nate</h4>
     </div>
   );
 };

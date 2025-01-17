@@ -1,0 +1,21 @@
+@use "../plug" as p;
+
+.doc-container {
+
+  .tabs-container {
+    background: p.$linearGrad;
+
+    .tabs-inner {
+        background-color: none;
+    }
+
+    pre {
+        color: p.$dark-primary;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+  }
+}
